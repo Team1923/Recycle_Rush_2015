@@ -41,7 +41,7 @@ public class OI {
     // Start the command when the button is released  and let it run the command
     // until it is finished as determined by it's isFinished method.
     // button.whenReleased(new ExampleCommand());
-	public Joystick leftStick;
+    public Joystick leftStick;
     public Joystick rightStick;
     public JoystickButton start;
     public JoystickButton a;
@@ -85,7 +85,7 @@ public class OI {
         
         // Assign commands to buttons
         
-	    a.whileHeld(new ElevatorUpCommand());
+        a.whileHeld(new ElevatorUpCommand());
         b.whileHeld(new ElevatorDownCommand());
     }
     
@@ -102,4 +102,3 @@ public class OI {
         return xboxController;
     }
 }
-

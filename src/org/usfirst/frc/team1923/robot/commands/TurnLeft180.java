@@ -8,11 +8,11 @@ import org.usfirst.frc.team1923.robot.RobotMap;
 /**
  *
  */
-public class TurnLeft90 extends Command {
+public class TurnLeft180 extends Command {
 	
 	private Timer timer = new Timer();
 	
-    public TurnLeft90() {
+    public TurnLeft180() {
     	requires(Robot.driveTrainSubsystem);
     }
 
@@ -29,8 +29,8 @@ public class TurnLeft90 extends Command {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        	return timer.get() >= 0.5;
-    }
+        	return timer.get() >= 1;
+    } 
 
     // Called once after isFinished returns true
     protected void end() {
