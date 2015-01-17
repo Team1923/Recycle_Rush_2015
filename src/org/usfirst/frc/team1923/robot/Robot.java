@@ -1,7 +1,5 @@
 
 package org.usfirst.frc.team1923.robot;
-
-
 import org.usfirst.frc.team1923.robot.commands.autonRoutine1;
 import org.usfirst.frc.team1923.robot.subsystems.DriveTrainSubsystem;
 import org.usfirst.frc.team1923.robot.subsystems.ElevatorSubsystem;
@@ -11,9 +9,6 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.CommandGroup;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-
-
-
 /**
  * The VM is configured to automatically run this class, and to call the
  * functions corresponding to each mode, as described in the IterativeRobot
@@ -21,8 +16,7 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
  * creating this project, you must also update the manifest file in the resource
  * directory.
  */
-public class Robot extends IterativeRobot {
-
+public class Robot extends IterativeRobot{
 	//public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
 	public static DriveTrainSubsystem driveTrainSubsystem = new DriveTrainSubsystem();
