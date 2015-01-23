@@ -15,7 +15,8 @@ public class DriveTrainSubsystem extends Subsystem {
     
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
-	
+	public double cLeft = 0;
+	public double cRight = 0;
 	
 
     public void initDefaultCommand() {
@@ -23,12 +24,23 @@ public class DriveTrainSubsystem extends Subsystem {
         //setDefaultCommand(new MySpecialCommand());
     	setDefaultCommand(new DriveWithJoyStickCommand()); // TBD for Commandbased programming
     }
+    public void coalesceLeft(double left){
+    	if (left < cLeft - 0.02){
+    		cLeft = cLeft - 0.02;
+    	} else if (left > cLeft + 0.02) {
+    		cLeft = cLeft + 0.02;
+    	} else {
+    		cLeft = left;
+    	}    	
+    }
+
+    
     
     // Manual Drive 
-    public void manualDrive(double x, double y) {
+    public void manualDrive(double left, double right) {
         //disablePID();
         //mode = MANUAL_MODE;
-    	RobotMap.robotDriveTrain.tankDrive(x, y);
+    	RobotMap.robotDriveTrain.tankDrive(left, right);
         
         
     }

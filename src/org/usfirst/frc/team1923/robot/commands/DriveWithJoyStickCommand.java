@@ -23,7 +23,13 @@ public class DriveWithJoyStickCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.driveTrainSubsystem.manualDrive(Robot.oi.leftStick.getY(), Robot.oi.rightStick.getY());
+    	boolean rightTrigger = Robot.oi.rightStick.getTrigger();
+    	boolean leftTrigger = Robot.oi.leftStick.getTrigger();
+    	if(rightTrigger && leftTrigger){
+        	Robot.driveTrainSubsystem.manualDrive(-Robot.oi.leftStick.getY(), -Robot.oi.rightStick.getY());
+    	} else {
+    		Robot.driveTrainSubsystem.manualDrive(-Robot.oi.leftStick.getY()/2, -Robot.oi.rightStick.getY()/2);    		
+    	}
     }
 
     // Make this return true when this Command no longer needs to run execute()
